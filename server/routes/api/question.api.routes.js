@@ -1,3 +1,4 @@
+const { log } = require('console');
 const app = require('../../app');
 const router = require('express').Router();
 const { Question } = require('../../db/models');
@@ -12,14 +13,13 @@ const { Question } = require('../../db/models');
 // });
 
 router.get('/:id', async (req, res) => {
-  const {id} = req.params
+  const { id } = req.params;
   try {
-    const data = await Question.findOne({where: {id}})
-    console.log(data);
-    res.json(data)
+    const question = await Question.findOne({ where: { id } });
+    res.json({ message: 'success', question });
   } catch (error) {
     res.status(418).json({ error: error.message });
   }
-})
+});
 
 module.exports = router;

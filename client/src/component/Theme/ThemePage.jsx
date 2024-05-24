@@ -1,17 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import Card from '../Card/Card';
+import React, { useEffect, useState } from "react";
+// import { Link, useParams } from "react-router-dom";
+import Card from "../Card/Card";
+import { Link } from "react-router-dom";
 
-function Theme({theme,setCurrentTheme}) {
-
+function Theme({ themes, currentTheme, setCurrentTheme }) {
   return (
     <>
       <div>
-    {theme.map((el) => {
-     return <button onClick={() => setCurrentTheme((current) => current+1)} key={el.id}>{el.title}</button>
-    })}
-      {/* <button >Мультфильмы</button>
+        <div>
+          {themes.map((theme) => (
+            <Link to={`/theme/${theme.id}/question/${theme.Questions[0].id}`}>
+              {theme.title}
+            </Link>
+          ))}
+          {/* <button >Мультфильмы</button>
       <button>Фильмы</button> */}
+        </div>
       </div>
     </>
   );
