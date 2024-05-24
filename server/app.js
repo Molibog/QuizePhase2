@@ -2,6 +2,7 @@ const express = require('express');
 
 const indexRoute = require('./routes/index.routes');
 const app = express();
+
 const PORT = 3000;
 
 app.use('/', indexRoute);
