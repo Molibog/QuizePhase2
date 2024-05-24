@@ -1,6 +1,6 @@
 const app = require('../../app');
 const router = require('express').Router();
-const { Question } = require('../../db/models');
+const { Theme } = require('../../db/models');
 
 // router.get('/', async (req, res) => {
 //   try {
@@ -11,11 +11,11 @@ const { Question } = require('../../db/models');
 //   }
 // });
 
-router.get('/:id', async (req, res) => {
-  const {id} = req.params
+router.get('/', async (req, res) => {
+
   try {
-    const data = await Question.findOne({where: {id}})
-    console.log(data);
+    const data = await Theme.findAll()
+console.log(data);
     res.json(data)
   } catch (error) {
     res.status(418).json({ error: error.message });
