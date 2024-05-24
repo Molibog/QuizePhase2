@@ -39,7 +39,7 @@ module.exports = {
         {
           title: 'Угадай мультфильм по кадру',
           answer: 'Аркейн',
-          img: 'https://wallpaperforu.com/wp-content/uploads/2022/01/Wallpaper-Jinx-League-Of-Legends-Arcane-3000x-29.jpg',
+          img: 'https://top10a.ru/wp-content/uploads/2022/01/screenshot_2-3.png',
           theme_id: 1,
         },
 

@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/">
           <Route
-            path="/theme"
+            index
             element={
               <ThemePage
                 themes={themes}

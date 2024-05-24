@@ -9,9 +9,14 @@ function Theme({ themes, currentTheme, setCurrentTheme }) {
       <div>
         <div>
           {themes.map((theme) => (
-            <Link to={`/theme/${theme.id}/question/${theme.Questions[0].id}`}>
-              {theme.title}
-            </Link>
+            <div key={theme.id} className="card" style={{ width: "30rem" }}>
+              <img src={theme.img} className="card-img-top" alt="..."></img>
+              <Link className="but"
+                to={`/theme/${theme.id}/question/${theme.Questions[0].id}`}
+              >
+                {theme.title}
+              </Link>
+            </div>
           ))}
           {/* <button >Мультфильмы</button>
       <button>Фильмы</button> */}
